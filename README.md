@@ -1,6 +1,7 @@
 # Baekmidang Renewal Project - PC
 
 *sample view*
+
 <img src="baekmidang.gif" alt="preview" />
 
 ## Link
