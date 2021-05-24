@@ -1,0 +1,139 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap');
+
+@font-face {font-family: 'S-CoreDream-4Regular'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-4Regular.woff') format('woff'); font-weight: normal; font-style: normal; }
+@font-face {
+     font-family: 'S-CoreDream-6Bold'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-6Bold.woff') format('woff'); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'S-CoreDream-5Medium'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-5Medium.woff') format('woff'); font-weight: normal; font-style: normal; }
+
+@font-face {
+    font-family: 'Cafe24Danjunghae';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Danjunghae.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*font-family: 'S-CoreDream-4Regular' font-family: 'S-CoreDream-6Bold';  font-family: 'S-CoreDream-5Medium';*/
+body{width:100%; min-width: 1200px;}
+
+*{padding:0; margin:0; font-family: 'S-CoreDream-4Regular', 'Malgun Gothic', '맑은 고딕', sans-serif; color:#333; font-size: 18px;}
+li{list-style:none;}
+a{text-decoration:none;}
+button{cursor:pointer;}
+img{border:none;}
+fieldset{border:none;}
+h2{font-size:26px; font-weight:600; height:40px;}
+legend{position: absolute; left:-999em;}
+
+/*header*/
+header{ position: fixed; top:0; left:0; right:0; margin:0 auto; z-index: 5000; width:100%; min-width:1200px; height:140px;  }
+.h_top{ width:100%; min-width:1200px; height:40px; background-color:#152148; overflow:hidden; }
+.h_top .h_nav{ float:right; width:240px; height:100%; }
+.h_top ul{ float:left;}
+.h_top li{ float:left; height:40px; line-height: 40px; margin-left:30px; }
+.h_top a{ color:#fff; font-size: 14px; font-weight:400; }
+.site_map{ position:relative; top:2px; float:right; height:40px; margin-left: 30px; line-height:40px; font-size:14px; color:#fff; }
+
+.h_bottom{ width:100%; min-width:1200px; height:100px; background-color:#fdfdfa;}
+.h_bottom .wrap{ position:relative; }
+
+/* gnb*/
+.h_bottom .gnb_left{ position: absolute; top:0; left:20px; height:100px; }
+.h_bottom .gnb_left > ul > li{ position:relative;  float:left; width:150px; height:100px; text-align: center; line-height: 100px; }
+.h_bottom .gnb_left > ul > li > a{display:block; width:100%; height:100%; font-weight:600; font-size: 20px; box-sizing: border-box; }
+
+
+.h_bottom h1{ position: absolute; top: 10px; left: calc(50% - 40px); }
+.h_bottom h1 a{display: block; width:80px; height:80px; background-image: url(../images/common/header_logo.png); background-size: 80px 80px; }
+
+.h_bottom .gnb_right{ position: absolute; top:0; right:20px; height:100px; }
+.h_bottom .gnb_right > ul > li{ position:relative; float:left; width:150px; height:100px; text-align: center; line-height: 100px; } 
+.h_bottom .gnb_right > ul > li > a{ display:block; width:100%; height:100%; font-weight:600; font-size: 20px; box-sizing: border-box; }
+
+.h_bottom .sub_nav{position:absolute; top:100px; left:0; z-index: 2100; display:none; padding-top:5px; box-sizing: border-box; text-align: center;}
+.h_bottom .sub_nav li{width:150px; height: 50px; line-height:50px;}
+.h_bottom .sub_nav a{display:block; width:100%; height:100%;}
+
+/* header sub_bg */
+header .sub_bg{position:absolute; top:140px; left:0; z-index: 2000; display:none; width:100%; height:260px; border-top:1px solid #152148; background-color:#fdfdfa;}
+
+/* sub_nav hover */
+.h_bottom .sub_nav a:hover, .h_bottom .sub_nav a:focus{color:#152148; font-family: 'S-CoreDream-6Bold';}
+
+/* gnb hover */
+.main_nav:after { position:absolute; bottom:0; display:block; width:100%; height:100%; border-bottom: 5px solid #152148; box-sizing:border-box; transform: scaleX(0); transition:0.3s; content:''; }
+.h_bottom li:hover .main_nav:after{transform:scaleX(1); }
+.h_bottom li:hover .main_nav{color:#152148;}
+
+/* gnb active */
+.h_bottom .main_nav.active:after{transform:scaleX(1); }
+.h_bottom .main_nav.active{color:#152148;}
+
+/* header active */
+header.active{height:100px; }
+header.active .h_top{display:none;}
+header.active .h_bottom{background-color:#152148;}
+header.active .h_bottom .gnb_left > ul > li > a{color:#fdfdfa; font-weight:400;}
+header.active .h_bottom .gnb_right > ul > li > a{color:#fdfdfa; font-weight:400;}
+header.active .h_bottom h1 a{background-image: url(../images/common/header_logo_scroll.png);}
+header.active .sub_bg{top:100px; border-bottom:1px solid #152148;}
+/* header active hover */
+header.active .main_nav:after { position:absolute; bottom:0; display:block; width:100%; height:100%; border-bottom: 5px solid #fdfdfa; box-sizing:border-box; transform: scaleX(0); transition:0.3s; content:''; }
+header.active .h_bottom li:hover .main_nav:after{transform:scaleX(1); }
+
+
+
+/*footer*/
+footer{position:relative; width:100%; min-width:1200px; height:250px; padding: 60px 0; box-sizing:border-box; background-color:#152148;}
+
+footer h1{ float:left; width:80px; height:130px; }
+footer h1 img{ position: absolute; top:calc(50% - 40px); width:80px; height:80px; } 
+
+.footer_nav{ float:left; width:547px; height:20px; margin:0 60px 0 60px; }
+.footer_nav ul{ float:left; }
+.footer_nav li{ float:left; margin-right:60px; height:20px; line-height:20px; }
+.footer_nav li:last-child{ margin:0; }
+.footer_nav a{ color:#ccc; font-size:14px; }
+
+/*language*/
+footer .wrap{ position:relative; }
+.family_site{ position:absolute; top:-80px; left:747px; width:120px; height: 102px; color:#ccc; font-size:14px; overflow: hidden; }
+.family_site button{ position:absolute; left:0; bottom:0;  z-index: 110; display:block; width:100%; height:20px; line-height:20px; border:none; background-color:#152148; }
+.family_site span{ font-size:14px; color:#ccc; }
+.family_site button .text{ float:left; }
+.family_site button .icon{ float: right; }
+.family_site .icon.active{ transform:rotate(180deg); }
+
+.family_site ul{ position:absolute; top:103px; left:0; z-index:100; width:100%; height:82px; border:1px solid #152148; box-sizing:border-box;  line-height:27px; background-color:#fdfdfa; transition:0.3s; }
+.family_site ul.active{ top: 0; }
+
+.family_site a{ display:block; padding-left:10px; box-sizing: border-box; width:118px; height:100%; font-size:14px; color:#152148; }
+
+.family_site a:focus, .family_site a:hover{background-color:#152148; color:#fdfdfa;}
+.family_site button:focus{border:none;}
+
+.social_media{float:right; width:190px; height:40px;}
+.social_media ul{position:relative; top:-12px; float:right; width:100%; height:100%;}
+.social_media li{float:left; width:40px; height:40px; margin-right:10px;}
+.social_media li:last-child{margin:0;}
+
+.address{position:relative; top: 2px; float:left; margin: 35px 0 0 60px; width:575px; height: 75px; line-height:25px; color:#ccc; font-size:14px; }
+
+.copyright{ float:right; height:20px; width:350px; margin-top: 70px; line-height:20px;  color:#ccc; font-size: 14px;}
+
+footer .go_mobile{display:none; position: absolute; top:110px; right:calc(50% - 600px); width:150px; height:25px; background-color:#ededed; border:1px solid #fff; border-radius: 5px; font-size:12px; color:#666; line-height:25px; text-align: center;}
+
+.wrap{width:1200px; height:100%; margin:0 auto;}
+
+
+
+/* top_btn */
+.top_btn{display:none; position:fixed; right: calc(50% - 700px); display:none; z-index: 7000; bottom: 100px; width:55px; height:55px;}
+.top_btn a{ display:block; width:100%; height:100%;  border-radius: 55px; background-color:rgba(21,33,72,0.9); background-image:url(../images/common/scrolltop_btn_out.png); background-repeat: no-repeat; background-position:center calc(50% - 13px); font-size:13px; color:#fdfdfa; text-align: center; line-height:72px; transition:0.2s; }
+/* top_btn hover */
+.top_btn a:hover{ background-color:#fdfdfa; border:2px solid #152148; background-image:url(../images/common/scrolltop_btn_over.png); color:#152148; font-family: 'S-CoreDream-6Bold'; }
+
+aside.active a{transition:0.3s ease-in-out;}
+aside.active a{background-color:#fdfdfa; background-image:url(../images/common/scrolltop_btn_over.png); color:#152148; font-family: 'S-CoreDream-6Bold'; }
+aside.active a:hover{ background-color:#152148; border:2px solid #fdfdfa; background-image:url(../images/common/scrolltop_btn_out.png); color:#fdfdfa;}
